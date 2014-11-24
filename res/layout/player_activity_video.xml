@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/video_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff000000" >
+        
+    </FrameLayout>
+    
+    <ScrollView
+            android:id="@+id/content_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="1.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip" >
+
+                <TextView
+                    android:id="@+id/detail_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15.0dip"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:gravity="center_horizontal"
+                    android:textColor="#ff010101"
+                    android:textSize="18.0sp"
+                    android:text="@string/detail_title" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="#ffe0e0e0" />
+
+                <TextView
+                    android:id="@+id/detail_brief"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15.0dip"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="#ff454648"
+                    android:textSize="15.0sp"
+                    android:text="@string/detail_content" />
+            </LinearLayout>
+        </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/video_play_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" >
+
+            <io.vov.vitamio.widget.CenterLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <io.vov.vitamio.widget.VideoView
+                    android:id="@+id/video_play_videoview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+            </io.vov.vitamio.widget.CenterLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/video_play_start_img"
+            android:layout_width="45.0dp"
+            android:layout_height="45.0dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/detail_play_button" />
+
+        <RelativeLayout
+            android:id="@+id/video_play_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/mediacontroller_top"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dp"
+                android:background="#80000000"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true" 
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/mediacontroller_top_back"
+                    android:layout_width="35.0dp"
+                    android:layout_height="35.0dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/player_back_2x" />
+
+                <TextView
+                    android:id="@+id/mediacontroller_top_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="测试视频"
+                    android:textColor="#ffffffff"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mediacontroller_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="50.0dp"
+                android:background="#80000000"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true" >
+
+                <ImageButton
+                    android:id="@+id/mediacontroller_paly_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/detail_pause_button"
+                    android:background="#00000000"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10.0dp" />
+
+                <ImageButton
+                    android:id="@+id/mediacontroller_fullscreen"
+                    android:layout_width="30.0dp"
+                    android:layout_height="30.0dp"
+                    android:src="@drawable/detail_play_fullscreen"
+                    android:background="#00000000"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10.0dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/mediacontroller_time_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/47:45"
+                    android:layout_toLeftOf="@id/mediacontroller_fullscreen"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp"
+                    android:layout_alignBottom="@id/mediacontroller_fullscreen"
+                    android:layout_marginRight="5.0dp"
+                    android:layout_marginBottom="8.0dp" />
+
+                <TextView
+                    android:id="@+id/mediacontroller_time_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:layout_toLeftOf="@id/mediacontroller_time_total"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp"
+                    android:layout_alignBottom="@id/mediacontroller_fullscreen"
+                    android:layout_marginLeft="5.0dp"
+                    android:layout_marginBottom="8.0dp" />
+                
+                <SeekBar
+                    android:id="@+id/mediacontroller_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/mediacontroller_paly_pause"
+                    android:layout_toLeftOf="@id/mediacontroller_time_current"
+                    android:layout_marginLeft="5.0dp"
+                    android:thumb="@drawable/player_seek_bar_indicator"
+                    android:thumbOffset="2.0dp"
+                    android:max="1000"
+                    android:maxHeight="7.0dp"
+                    android:minHeight="7.0dp"
+                    android:progressDrawable="@drawable/mediacontroller_seekbar" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/loding_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:visibility="gone" >
+            
+            <ImageView
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/player_loading01" />
+
+            <TextView
+                android:id="@+id/loading_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0% 加载中" 
+                android:textColor="#ffffff"
+                android:paddingLeft="5.0dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

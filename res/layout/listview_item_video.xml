@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70.0dp"
+    android:background="#ffeeeeee" >
+
+    <ImageView
+        android:id="@+id/video_type"
+        android:layout_width="60.0dp"
+        android:layout_height="60.0dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0dp"
+        android:src="@drawable/camera_dark_on" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@id/video_type"
+        android:padding="10.0dp" >
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试视频"
+            android:textSize="15.0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/video_source"
+            android:layout_width="wrap_content"
+            android:layout_height="15.0dp"
+            android:text="中国移动和新闻"
+            android:textColor="#7f000000"
+            android:textSize="10.0sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
